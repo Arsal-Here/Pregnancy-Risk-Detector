@@ -12,8 +12,8 @@ def load_lottiefile(filepath: str):
         return json.load(f)
 
 # Load model
-model = joblib.load("Train\model.pkl")  # Replace with your actual model
-df = pd.read_csv("Data\dataset.csv")
+model = joblib.load("model.pkl")  # Replace with your actual model
+df = pd.read_csv("dataset.csv")
 # Page Config
 st.set_page_config(page_title="Pregnancy Risk Detector", page_icon="🩺", layout="wide")
 
@@ -154,4 +154,5 @@ if prediction: # high risk pregnancy
               - Plan with your doctor for possible early delivery or C-section
               - Choose a hospital with a NICU if needed
             """)
+
 
