@@ -9,7 +9,7 @@ from sklearn.linear_model import LogisticRegression
 import seaborn as sns
 import matplotlib.pyplot as plt
 
-df = pd.read_csv('Data\dataset.csv')
+df = pd.read_csv('dataset.csv')
 print(df.head)
 
 #Making the categorical values to numerical
@@ -36,3 +36,4 @@ print(predictions)
 print(classification_report(y_test,predictions))
 
 joblib.dump(NBmodel,'model.pkl')
+
