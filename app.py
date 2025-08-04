@@ -65,17 +65,9 @@ with left:
     st.pyplot(fig)
 
 with right:
-    st.markdown("""
-<div style='color: black; font-size: 25px;'>
-  <ul>
-    <li>Approximately 20 million high‑risk pregnancies occur annually worldwide, representing about 6–7% of all births, particularly in low‑ and lower‑middle‑income countries.</li>
-    <li>Hypertensive disorders of pregnancy (e.g., preeclampsia) affect 5–10% of pregnancies globally, contributing to maternal deaths and adverse perinatal outcomes.</li>
-    <li>Gestational diabetes affects about 16.7% of all births globally, with higher rates in low- and middle-income countries (~14–15%).</li>
-  </ul>
-</div>
-""", unsafe_allow_html=True)
-
-
+    st.markdown("<p style='font-size:25px'>- Approximately 20 million high‑risk pregnancies occur annually worldwide, representing about 6–7% of all births, particularly in low‑ and lower‑middle‑income countries</p>",unsafe_allow_html=True)        
+    st.markdown("<p style='font-size:25px'>- Hypertensive disorders of pregnancy (e.g., preeclampsia) affect 5–10% of pregnancies globally, contributing to maternal deaths and adverse perinatal outcomes.</p>",unsafe_allow_html=True)
+    st.markdown("<p style='font-size:25px'>- Gestational diabetes affects about 16.7% of all births globally, with higher rates in low- and middle-income countries (~14–15%)</p>",unsafe_allow_html=True)
 
 st.subheader("🩺 Predict the risk level based on pregnancy-related health metrics")
 prediction = 0
@@ -157,6 +149,7 @@ if prediction: # high risk pregnancy
               - Plan with your doctor for possible early delivery or C-section
               - Choose a hospital with a NICU if needed
             """)
+
 
 
 
