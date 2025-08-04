@@ -12,8 +12,8 @@ def load_lottiefile(filepath: str):
         return json.load(f)
 
 # Load model
-model = joblib.load("model.pkl")  # Replace with your actual model
-df = pd.read_csv("dataset.csv")
+model = joblib.load("Train\model.pkl")  # Replace with your actual model
+df = pd.read_csv("Data\dataset.csv")
 # Page Config
 st.set_page_config(page_title="Pregnancy Risk Detector", page_icon="🩺", layout="wide")
 
@@ -38,14 +38,14 @@ st.markdown("""
         }
         .stButton > button:hover {
             background-color: #c9184a;
-        }
+        }    
     </style>
 """, unsafe_allow_html=True)
 
 # Header Section
 lottie_animation = load_lottiefile("Pregnant.json")  # Download from lottiefiles.com
 with st.container():
-    st.markdown("<h1> <p style='font-size:70px; color:#FF69B4'> Pregnancy Risk Level Detector</h1>", unsafe_allow_html=True)
+    st.markdown("<h1> <p style='font-size:80px; color:#FF69B4'> Pregnancy Risk Level Detector</h1>", unsafe_allow_html=True)
     
 left,right = st.columns(2)
 with left:
@@ -66,12 +66,15 @@ with left:
 
 with right:
     st.markdown("""
-        <ul style='color:#D3D3D3; font-size:25px;'>
-          <li><strong>Approximately 20 million high‑risk pregnancies occur annually worldwide</strong>, representing about <strong>6–7% of all births</strong>, particularly in low‑ and lower‑middle‑income countries</li>
-          <li><strong>Hypertensive disorders of pregnancy (e.g., preeclampsia)</strong> affect <strong>5–10% of pregnancies globally</strong>, contributing to maternal deaths and adverse perinatal outcomes.</li>
-          <li><strong>Gestational diabetes affects about 16.7% of all births globally, with higher rates in low- and middle-income countries (~14–15%)</strong></li>
-        </ul>
-        """, unsafe_allow_html=True)
+<div style='color: black; font-size: 25px;'>
+  <ul>
+    <li>Approximately 20 million high‑risk pregnancies occur annually worldwide, representing about 6–7% of all births, particularly in low‑ and lower‑middle‑income countries.</li>
+    <li>Hypertensive disorders of pregnancy (e.g., preeclampsia) affect 5–10% of pregnancies globally, contributing to maternal deaths and adverse perinatal outcomes.</li>
+    <li>Gestational diabetes affects about 16.7% of all births globally, with higher rates in low- and middle-income countries (~14–15%).</li>
+  </ul>
+</div>
+""", unsafe_allow_html=True)
+
 
 
 st.subheader("🩺 Predict the risk level based on pregnancy-related health metrics")
@@ -154,8 +157,4 @@ if prediction: # high risk pregnancy
               - Plan with your doctor for possible early delivery or C-section
               - Choose a hospital with a NICU if needed
             """)
-
-
-
-
 
