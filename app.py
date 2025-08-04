@@ -45,7 +45,7 @@ st.markdown("""
 # Header Section
 lottie_animation = load_lottiefile("Pregnant.json")  # Download from lottiefiles.com
 with st.container():
-    st.markdown("<h1> <p style='font-size:80px; color:#FF69B4'> Pregnancy Risk Level Detector</h1>", unsafe_allow_html=True)
+    st.markdown("<h1> <p style='font-size:70px; color:#FF69B4'> Pregnancy Risk Level Detector</h1>", unsafe_allow_html=True)
     
 left,right = st.columns(2)
 with left:
@@ -183,3 +183,4 @@ st.markdown("""
     </a>
 </div>
 """, unsafe_allow_html=True)
+
