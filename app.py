@@ -45,7 +45,7 @@ st.markdown("""
 # Header Section
 lottie_animation = load_lottiefile("Pregnant.json")  # Download from lottiefiles.com
 with st.container():
-    st.markdown("<h1> <p style='font-size:70px; color:#FF69B4'> Pregnancy Risk Level Detector</h1>", unsafe_allow_html=True)
+    st.markdown("<h1> <p style='font-size:80px; color:#FF69B4'> Pregnancy Risk Level Detector</h1>", unsafe_allow_html=True)
     
 left,right = st.columns(2)
 with left:
@@ -68,6 +68,7 @@ with right:
     st.markdown("<p style='font-size:25px'>- Approximately 20 million high‑risk pregnancies occur annually worldwide, representing about 6–7% of all births, particularly in low‑ and lower‑middle‑income countries</p>",unsafe_allow_html=True)        
     st.markdown("<p style='font-size:25px'>- Hypertensive disorders of pregnancy (e.g., preeclampsia) affect 5–10% of pregnancies globally, contributing to maternal deaths and adverse perinatal outcomes.</p>",unsafe_allow_html=True)
     st.markdown("<p style='font-size:25px'>- Gestational diabetes affects about 16.7% of all births globally, with higher rates in low- and middle-income countries (~14–15%)</p>",unsafe_allow_html=True)
+
 
 st.subheader("🩺 Predict the risk level based on pregnancy-related health metrics")
 prediction = 0
@@ -151,6 +152,34 @@ if prediction: # high risk pregnancy
             """)
 
 
+left,r = st.columns(2)
+with left:
+    st.markdown("<p style='font-size:20px;  '>Connect with me: </p>",unsafe_allow_html=True)
 
+# Display icons with links
+st.markdown("""
+<style>
+.icon-row {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+.icon-row img {
+    width: 60px;
+    height: 60px;
+}
+</style>
 
-
+<div class="icon-row">
+    <!-- LinkedIn -->
+    <a href="https://www.linkedin.com/in/arsal-mohsin-4043ab288/" target="_blank">
+        <img src="https://cdn-icons-png.flaticon.com/512/174/174857.png" alt="LinkedIn">
+    </a><!-- Gmail -->
+    <a href="mailto:arsalbinmohsin@gmail.com" target="_blank">
+        <img src="https://cdn-icons-png.flaticon.com/512/281/281769.png" alt="Gmail">
+    </a><!-- GitHub -->
+    <a href="https://github.com/Arsal-Here  " target="_blank">
+        <img src="https://cdn-icons-png.flaticon.com/512/733/733553.png" alt="GitHub">
+    </a>
+</div>
+""", unsafe_allow_html=True)
